@@ -10,8 +10,6 @@
 		FA0B0A521C2FEC3100913ECF /* Servus.h in Headers */ = {isa = PBXBuildFile; fileRef = FA0B0A511C2FEC3100913ECF /* Servus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA0B0A591C2FEC3100913ECF /* Servus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0B0A4E1C2FEC3100913ECF /* Servus.framework */; };
 		FA0B0A5E1C2FEC3100913ECF /* ServusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0A5D1C2FEC3100913ECF /* ServusTests.swift */; };
-		FA0B0A951C2FECF500913ECF /* Servus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0B0A4E1C2FEC3100913ECF /* Servus.framework */; };
-		FA0B0A961C2FECF500913ECF /* Servus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA0B0A4E1C2FEC3100913ECF /* Servus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FA0B0A9B1C2FED1300913ECF /* Explorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0A9A1C2FED1300913ECF /* Explorer.swift */; };
 		FA0B0A9F1C3071C200913ECF /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0A9E1C3071C200913ECF /* Advertiser.swift */; };
 		FA0B0AA11C30745700913ECF /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0AA01C30745700913ECF /* Resolver.swift */; };
@@ -27,28 +25,7 @@
 			remoteGlobalIDString = FA0B0A4D1C2FEC3100913ECF;
 			remoteInfo = Servus;
 		};
-		FA0B0A971C2FECF500913ECF /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FA0B0A451C2FEC3100913ECF /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FA0B0A4D1C2FEC3100913ECF;
-			remoteInfo = Servus;
-		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		FA0B0A991C2FECF500913ECF /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				FA0B0A961C2FECF500913ECF /* Servus.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FA0B0A4E1C2FEC3100913ECF /* Servus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Servus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +34,6 @@
 		FA0B0A581C2FEC3100913ECF /* ServusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ServusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0B0A5D1C2FEC3100913ECF /* ServusTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServusTests.swift; sourceTree = "<group>"; };
 		FA0B0A5F1C2FEC3100913ECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA0B0A751C2FECA800913ECF /* NearbyShoutbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearbyShoutbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0B0A9A1C2FED1300913ECF /* Explorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Explorer.swift; sourceTree = "<group>"; };
 		FA0B0A9E1C3071C200913ECF /* Advertiser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
 		FA0B0AA01C30745700913ECF /* Resolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
@@ -81,14 +57,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA0B0A721C2FECA800913ECF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FA0B0A951C2FECF500913ECF /* Servus.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -106,7 +74,6 @@
 			children = (
 				FA0B0A4E1C2FEC3100913ECF /* Servus.framework */,
 				FA0B0A581C2FEC3100913ECF /* ServusTests.xctest */,
-				FA0B0A751C2FECA800913ECF /* NearbyShoutbox.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,25 +151,6 @@
 			productReference = FA0B0A581C2FEC3100913ECF /* ServusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		FA0B0A741C2FECA800913ECF /* NearbyShoutbox */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FA0B0A931C2FECA900913ECF /* Build configuration list for PBXNativeTarget "NearbyShoutbox" */;
-			buildPhases = (
-				FA0B0A711C2FECA800913ECF /* Sources */,
-				FA0B0A721C2FECA800913ECF /* Frameworks */,
-				FA0B0A731C2FECA800913ECF /* Resources */,
-				FA0B0A991C2FECF500913ECF /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FA0B0A981C2FECF500913ECF /* PBXTargetDependency */,
-			);
-			name = NearbyShoutbox;
-			productName = NearbyShoutbox;
-			productReference = FA0B0A751C2FECA800913ECF /* NearbyShoutbox.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -217,9 +165,6 @@
 						CreatedOnToolsVersion = 7.2;
 					};
 					FA0B0A571C2FEC3100913ECF = {
-						CreatedOnToolsVersion = 7.2;
-					};
-					FA0B0A741C2FECA800913ECF = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -239,7 +184,6 @@
 			targets = (
 				FA0B0A4D1C2FEC3100913ECF /* Servus */,
 				FA0B0A571C2FEC3100913ECF /* ServusTests */,
-				FA0B0A741C2FECA800913ECF /* NearbyShoutbox */,
 			);
 		};
 /* End PBXProject section */
@@ -253,13 +197,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		FA0B0A561C2FEC3100913ECF /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FA0B0A731C2FECA800913ECF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -289,13 +226,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FA0B0A711C2FECA800913ECF /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -303,11 +233,6 @@
 			isa = PBXTargetDependency;
 			target = FA0B0A4D1C2FEC3100913ECF /* Servus */;
 			targetProxy = FA0B0A5A1C2FEC3100913ECF /* PBXContainerItemProxy */;
-		};
-		FA0B0A981C2FECF500913ECF /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FA0B0A4D1C2FEC3100913ECF /* Servus */;
-			targetProxy = FA0B0A971C2FECF500913ECF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -456,30 +381,6 @@
 			};
 			name = Release;
 		};
-		FA0B0A8F1C2FECA900913ECF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = NearbyShoutbox/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexanderjuda.NearbyShoutbox;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		FA0B0A901C2FECA900913ECF /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = NearbyShoutbox/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexanderjuda.NearbyShoutbox;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -509,14 +410,6 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
-		};
-		FA0B0A931C2FECA900913ECF /* Build configuration list for PBXNativeTarget "NearbyShoutbox" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FA0B0A8F1C2FECA900913ECF /* Debug */,
-				FA0B0A901C2FECA900913ECF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
