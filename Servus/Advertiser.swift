@@ -24,7 +24,7 @@ class Advertiser {
     func start() {
         stop()
         
-        announcingService = NSNetService(domain: netServiceDomain, type: netServiceType, name: identifier)
+        announcingService = NSNetService(domain: netServiceDomain, type: netServiceType, name: identifier, port: 0)
         announcingService?.includesPeerToPeer = true
         announcingService?.publish()
     }
