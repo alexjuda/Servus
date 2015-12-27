@@ -45,10 +45,12 @@ public class Explorer {
     
     public func startExploring() {
         advertiser.start()
+        revealer.start()
     }
     
     public func stopExploring() {
         advertiser.stop()
+        revealer.stop()
     }
 }
 
