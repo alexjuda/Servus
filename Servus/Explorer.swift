@@ -57,6 +57,8 @@ public class Explorer {
 extension Explorer: RevealerDelegate {
     func revealer(revealer: Revealer, didRevealService netService: NSNetService) {
         resolver.resolveService(netService)
+        let peer = Peer(netService: netService)
+        delegate?.explorer(self, didSpotPeer: peer)
     }
     
     func revealer(revealer: Revealer, didLoseService netService: NSNetService) {
