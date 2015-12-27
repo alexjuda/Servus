@@ -13,11 +13,12 @@ import Servus
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var explorer: Explorer!
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        let explorer = Explorer()
+        explorer = Explorer(identifier: NSUUID().UUIDString, appName: "servus")
+        explorer.delegate = self
         explorer.startExploring()
         
         return true
@@ -44,7 +45,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
 
-
+extension AppDelegate: ExplorerDelegate {
+    func explorer(explorer: Explorer, didSpotPeer peer: Peer) {
+        print(__FUNCTION__)
+    }
+    
+    func explorer(explorer: Explorer, didDeterminePeer peer: Peer) {
+        print(__FUNCTION__)
+    }
+    
+    func explorer(explorer: Explorer, didLosePeer peer: Peer) {
+        print(__FUNCTION__)
+    }
 }
 
