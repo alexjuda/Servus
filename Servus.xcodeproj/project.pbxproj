@@ -13,7 +13,38 @@
 		FA0B0AA11C30745700913ECF /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0AA01C30745700913ECF /* Resolver.swift */; };
 		FA0B0AA31C307AA000913ECF /* Peer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0AA21C307AA000913ECF /* Peer.swift */; };
 		FA0B0AA51C307DFD00913ECF /* Revealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0AA41C307DFD00913ECF /* Revealer.swift */; };
+		FA0B0AAD1C308D8A00913ECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0AAC1C308D8A00913ECF /* AppDelegate.swift */; };
+		FA0B0AAF1C308D8A00913ECF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0AAE1C308D8A00913ECF /* ViewController.swift */; };
+		FA0B0AB21C308D8A00913ECF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0B0AB01C308D8A00913ECF /* Main.storyboard */; };
+		FA0B0AB41C308D8A00913ECF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA0B0AB31C308D8A00913ECF /* Assets.xcassets */; };
+		FA0B0AB71C308D8A00913ECF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA0B0AB51C308D8A00913ECF /* LaunchScreen.storyboard */; };
+		FA0B0ABC1C3092D800913ECF /* Servus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0B0A4E1C2FEC3100913ECF /* Servus.framework */; };
+		FA0B0ABD1C3092D800913ECF /* Servus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA0B0A4E1C2FEC3100913ECF /* Servus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA0B0ABE1C3092D800913ECF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA0B0A451C2FEC3100913ECF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA0B0A4D1C2FEC3100913ECF;
+			remoteInfo = Servus;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FA0B0AC01C3092D800913ECF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FA0B0ABD1C3092D800913ECF /* Servus.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FA0B0A4E1C2FEC3100913ECF /* Servus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Servus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +55,13 @@
 		FA0B0AA01C30745700913ECF /* Resolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
 		FA0B0AA21C307AA000913ECF /* Peer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peer.swift; sourceTree = "<group>"; };
 		FA0B0AA41C307DFD00913ECF /* Revealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Revealer.swift; sourceTree = "<group>"; };
+		FA0B0AAA1C308D8A00913ECF /* NearbyShoutboxExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NearbyShoutboxExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0B0AAC1C308D8A00913ECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA0B0AAE1C308D8A00913ECF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA0B0AB11C308D8A00913ECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FA0B0AB31C308D8A00913ECF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA0B0AB61C308D8A00913ECF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA0B0AB81C308D8A00913ECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +72,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA0B0AA71C308D8A00913ECF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA0B0ABC1C3092D800913ECF /* Servus.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -41,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				FA0B0A501C2FEC3100913ECF /* Servus */,
+				FA0B0AAB1C308D8A00913ECF /* NearbyShoutboxExample */,
 				FA0B0A4F1C2FEC3100913ECF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				FA0B0A4E1C2FEC3100913ECF /* Servus.framework */,
+				FA0B0AAA1C308D8A00913ECF /* NearbyShoutboxExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,6 +113,19 @@
 				FA0B0A531C2FEC3100913ECF /* Info.plist */,
 			);
 			path = Servus;
+			sourceTree = "<group>";
+		};
+		FA0B0AAB1C308D8A00913ECF /* NearbyShoutboxExample */ = {
+			isa = PBXGroup;
+			children = (
+				FA0B0AAC1C308D8A00913ECF /* AppDelegate.swift */,
+				FA0B0AAE1C308D8A00913ECF /* ViewController.swift */,
+				FA0B0AB01C308D8A00913ECF /* Main.storyboard */,
+				FA0B0AB31C308D8A00913ECF /* Assets.xcassets */,
+				FA0B0AB51C308D8A00913ECF /* LaunchScreen.storyboard */,
+				FA0B0AB81C308D8A00913ECF /* Info.plist */,
+			);
+			path = NearbyShoutboxExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,6 +160,25 @@
 			productReference = FA0B0A4E1C2FEC3100913ECF /* Servus.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		FA0B0AA91C308D8A00913ECF /* NearbyShoutboxExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA0B0AB91C308D8A00913ECF /* Build configuration list for PBXNativeTarget "NearbyShoutboxExample" */;
+			buildPhases = (
+				FA0B0AA61C308D8A00913ECF /* Sources */,
+				FA0B0AA71C308D8A00913ECF /* Frameworks */,
+				FA0B0AA81C308D8A00913ECF /* Resources */,
+				FA0B0AC01C3092D800913ECF /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA0B0ABF1C3092D800913ECF /* PBXTargetDependency */,
+			);
+			name = NearbyShoutboxExample;
+			productName = NearbyShoutboxExample;
+			productReference = FA0B0AAA1C308D8A00913ECF /* NearbyShoutboxExample.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -110,6 +190,9 @@
 				ORGANIZATIONNAME = "Alexander Juda";
 				TargetAttributes = {
 					FA0B0A4D1C2FEC3100913ECF = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					FA0B0AA91C308D8A00913ECF = {
 						CreatedOnToolsVersion = 7.2;
 					};
 				};
@@ -128,6 +211,7 @@
 			projectRoot = "";
 			targets = (
 				FA0B0A4D1C2FEC3100913ECF /* Servus */,
+				FA0B0AA91C308D8A00913ECF /* NearbyShoutboxExample */,
 			);
 		};
 /* End PBXProject section */
@@ -137,6 +221,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA0B0AA81C308D8A00913ECF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA0B0AB71C308D8A00913ECF /* LaunchScreen.storyboard in Resources */,
+				FA0B0AB41C308D8A00913ECF /* Assets.xcassets in Resources */,
+				FA0B0AB21C308D8A00913ECF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,7 +249,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA0B0AA61C308D8A00913ECF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA0B0AAF1C308D8A00913ECF /* ViewController.swift in Sources */,
+				FA0B0AAD1C308D8A00913ECF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA0B0ABF1C3092D800913ECF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA0B0A4D1C2FEC3100913ECF /* Servus */;
+			targetProxy = FA0B0ABE1C3092D800913ECF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA0B0AB01C308D8A00913ECF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA0B0AB11C308D8A00913ECF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FA0B0AB51C308D8A00913ECF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA0B0AB61C308D8A00913ECF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		FA0B0A601C2FEC3100913ECF /* Debug */ = {
@@ -282,6 +412,30 @@
 			};
 			name = Release;
 		};
+		FA0B0ABA1C308D8A00913ECF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = NearbyShoutboxExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexanderjuda.NearbyShoutboxExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FA0B0ABB1C308D8A00913ECF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				INFOPLIST_FILE = NearbyShoutboxExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexanderjuda.NearbyShoutboxExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -299,6 +453,15 @@
 			buildConfigurations = (
 				FA0B0A631C2FEC3100913ECF /* Debug */,
 				FA0B0A641C2FEC3100913ECF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA0B0AB91C308D8A00913ECF /* Build configuration list for PBXNativeTarget "NearbyShoutboxExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA0B0ABA1C308D8A00913ECF /* Debug */,
+				FA0B0ABB1C308D8A00913ECF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -4,10 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>NearbyShoutbox.xcscheme</key>
+		<key>NearbyShoutboxExample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>2</integer>
 		</dict>
 		<key>Servus.xcscheme</key>
 		<dict>
@@ -33,6 +33,11 @@
 			<true/>
 		</dict>
 		<key>FA0B0A871C2FECA900913ECF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA0B0AA91C308D8A00913ECF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

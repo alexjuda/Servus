@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA0B0A741C2FECA800913ECF"
-               BuildableName = "NearbyShoutbox.app"
-               BlueprintName = "NearbyShoutbox"
+               BlueprintIdentifier = "FA0B0AA91C308D8A00913ECF"
+               BuildableName = "NearbyShoutboxExample.app"
+               BlueprintName = "NearbyShoutboxExample"
                ReferencedContainer = "container:Servus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,23 +28,13 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA0B0A871C2FECA900913ECF"
-               BuildableName = "NearbyShoutboxTests.xctest"
-               BlueprintName = "NearbyShoutboxTests"
-               ReferencedContainer = "container:Servus.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA0B0A741C2FECA800913ECF"
-            BuildableName = "NearbyShoutbox.app"
-            BlueprintName = "NearbyShoutbox"
+            BlueprintIdentifier = "FA0B0AA91C308D8A00913ECF"
+            BuildableName = "NearbyShoutboxExample.app"
+            BlueprintName = "NearbyShoutboxExample"
             ReferencedContainer = "container:Servus.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,9 +55,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA0B0A741C2FECA800913ECF"
-            BuildableName = "NearbyShoutbox.app"
-            BlueprintName = "NearbyShoutbox"
+            BlueprintIdentifier = "FA0B0AA91C308D8A00913ECF"
+            BuildableName = "NearbyShoutboxExample.app"
+            BlueprintName = "NearbyShoutboxExample"
             ReferencedContainer = "container:Servus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -84,9 +74,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA0B0A741C2FECA800913ECF"
-            BuildableName = "NearbyShoutbox.app"
-            BlueprintName = "NearbyShoutbox"
+            BlueprintIdentifier = "FA0B0AA91C308D8A00913ECF"
+            BuildableName = "NearbyShoutboxExample.app"
+            BlueprintName = "NearbyShoutboxExample"
             ReferencedContainer = "container:Servus.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
