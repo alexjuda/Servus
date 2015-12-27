@@ -24,9 +24,13 @@ public class Explorer {
     public init(identifier: String, appName: String) {
         let type = "_\(appName)._tcp."
         let domain = "local."
+        
         advertiser = Advertiser(identifier: identifier, netServiceType: type, netServiceDomain: domain)
         revealer = Revealer(localIdentifier: identifier, netServiceType: type, netServiceDomain: domain)
         resolver = Resolver(timeout: 60.0)
+        
+        revealer.delegate = self
+        resolver.delegate = self
     }
     
     public convenience init() {
