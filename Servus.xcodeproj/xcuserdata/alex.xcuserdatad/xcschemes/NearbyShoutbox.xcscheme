@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA0B0A4D1C2FEC3100913ECF"
-               BuildableName = "Servus.framework"
-               BlueprintName = "Servus"
+               BlueprintIdentifier = "FA0B0A741C2FECA800913ECF"
+               BuildableName = "NearbyShoutbox.app"
+               BlueprintName = "NearbyShoutbox"
                ReferencedContainer = "container:Servus.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA0B0A571C2FEC3100913ECF"
-               BuildableName = "ServusTests.xctest"
-               BlueprintName = "ServusTests"
+               BlueprintIdentifier = "FA0B0A871C2FECA900913ECF"
+               BuildableName = "NearbyShoutboxTests.xctest"
+               BlueprintName = "NearbyShoutboxTests"
                ReferencedContainer = "container:Servus.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA0B0A4D1C2FEC3100913ECF"
-            BuildableName = "Servus.framework"
-            BlueprintName = "Servus"
+            BlueprintIdentifier = "FA0B0A741C2FECA800913ECF"
+            BuildableName = "NearbyShoutbox.app"
+            BlueprintName = "NearbyShoutbox"
             ReferencedContainer = "container:Servus.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,15 +61,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA0B0A4D1C2FEC3100913ECF"
-            BuildableName = "Servus.framework"
-            BlueprintName = "Servus"
+            BlueprintIdentifier = "FA0B0A741C2FECA800913ECF"
+            BuildableName = "NearbyShoutbox.app"
+            BlueprintName = "NearbyShoutbox"
             ReferencedContainer = "container:Servus.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -79,15 +80,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA0B0A4D1C2FEC3100913ECF"
-            BuildableName = "Servus.framework"
-            BlueprintName = "Servus"
+            BlueprintIdentifier = "FA0B0A741C2FECA800913ECF"
+            BuildableName = "NearbyShoutbox.app"
+            BlueprintName = "NearbyShoutbox"
             ReferencedContainer = "container:Servus.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
