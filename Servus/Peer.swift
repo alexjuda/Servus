@@ -14,8 +14,8 @@ public class Peer {
     public let identifier: String
     public let hostname: String?
     
-    public let ipv4Address: String? = nil
-    public let ipv6Address: String? = nil
+    let ipv4Address: String? = nil
+    let ipv6Address: String? = nil
     
     init(netService: NSNetService) {
         identifier = netService.name
