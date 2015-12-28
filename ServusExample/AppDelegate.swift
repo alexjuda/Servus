@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         explorer = Explorer()
         explorer.delegate = self
         explorer.startExploring()
+        print("Started exploring nearby peers...")
         
         window = UIWindow(frame: UIScreen.mainScreen().bounds)
         
