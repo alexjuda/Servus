@@ -8,12 +8,15 @@
 
 import Foundation
 
+/// Model class representing a device participating in Bonjour exploration.
 public class Peer {
-    let netService: NSNetService
-    
+    /// Identifier the device's Explorer was initialized with.
     public let identifier: String
+    
+    /// The device's hostname. This value should be used in place of an IP address.
     public let hostname: String?
     
+    let netService: NSNetService
     
     init(netService: NSNetService) {
         identifier = netService.name
