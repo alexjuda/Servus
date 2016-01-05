@@ -10,9 +10,9 @@
 		FA0B0A521C2FEC3100913ECF /* Servus.h in Headers */ = {isa = PBXBuildFile; fileRef = FA0B0A511C2FEC3100913ECF /* Servus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA0B0A9B1C2FED1300913ECF /* Explorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0A9A1C2FED1300913ECF /* Explorer.swift */; };
 		FA0B0A9F1C3071C200913ECF /* Advertiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0A9E1C3071C200913ECF /* Advertiser.swift */; };
-		FA0B0AA11C30745700913ECF /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0AA01C30745700913ECF /* Resolver.swift */; };
+		FA0B0AA11C30745700913ECF /* Revealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0AA01C30745700913ECF /* Revealer.swift */; };
 		FA0B0AA31C307AA000913ECF /* Peer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0AA21C307AA000913ECF /* Peer.swift */; };
-		FA0B0AA51C307DFD00913ECF /* Revealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0AA41C307DFD00913ECF /* Revealer.swift */; };
+		FA0B0AA51C307DFD00913ECF /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0AA41C307DFD00913ECF /* Resolver.swift */; };
 		FA0B0AC81C30A76000913ECF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0B0AC71C30A76000913ECF /* AppDelegate.swift */; };
 		FA0B0AD71C30A78B00913ECF /* Servus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0B0A4E1C2FEC3100913ECF /* Servus.framework */; };
 		FA0B0AD81C30A78B00913ECF /* Servus.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FA0B0A4E1C2FEC3100913ECF /* Servus.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -45,12 +45,12 @@
 /* Begin PBXFileReference section */
 		FA0B0A4E1C2FEC3100913ECF /* Servus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Servus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0B0A511C2FEC3100913ECF /* Servus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Servus.h; sourceTree = "<group>"; };
-		FA0B0A531C2FEC3100913ECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA0B0A531C2FEC3100913ECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Internals/Info.plist; sourceTree = "<group>"; };
 		FA0B0A9A1C2FED1300913ECF /* Explorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Explorer.swift; sourceTree = "<group>"; };
-		FA0B0A9E1C3071C200913ECF /* Advertiser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Advertiser.swift; sourceTree = "<group>"; };
-		FA0B0AA01C30745700913ECF /* Resolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resolver.swift; sourceTree = "<group>"; };
+		FA0B0A9E1C3071C200913ECF /* Advertiser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Advertiser.swift; path = Internals/Advertiser.swift; sourceTree = "<group>"; };
+		FA0B0AA01C30745700913ECF /* Revealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Revealer.swift; path = Internals/Revealer.swift; sourceTree = "<group>"; };
 		FA0B0AA21C307AA000913ECF /* Peer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Peer.swift; sourceTree = "<group>"; };
-		FA0B0AA41C307DFD00913ECF /* Revealer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Revealer.swift; sourceTree = "<group>"; };
+		FA0B0AA41C307DFD00913ECF /* Resolver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Resolver.swift; path = Internals/Resolver.swift; sourceTree = "<group>"; };
 		FA0B0AC51C30A76000913ECF /* ServusExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServusExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA0B0AC71C30A76000913ECF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA0B0AD31C30A76000913ECF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,11 +98,8 @@
 			children = (
 				FA0B0A511C2FEC3100913ECF /* Servus.h */,
 				FA0B0A9A1C2FED1300913ECF /* Explorer.swift */,
-				FA0B0A9E1C3071C200913ECF /* Advertiser.swift */,
-				FA0B0AA41C307DFD00913ECF /* Revealer.swift */,
-				FA0B0AA01C30745700913ECF /* Resolver.swift */,
 				FA0B0AA21C307AA000913ECF /* Peer.swift */,
-				FA0B0A531C2FEC3100913ECF /* Info.plist */,
+				FA7FF59D1C3B431200575679 /* Internals */,
 			);
 			path = Servus;
 			sourceTree = "<group>";
@@ -114,6 +111,17 @@
 				FA0B0AD31C30A76000913ECF /* Info.plist */,
 			);
 			path = ServusExample;
+			sourceTree = "<group>";
+		};
+		FA7FF59D1C3B431200575679 /* Internals */ = {
+			isa = PBXGroup;
+			children = (
+				FA0B0A9E1C3071C200913ECF /* Advertiser.swift */,
+				FA0B0AA41C307DFD00913ECF /* Resolver.swift */,
+				FA0B0AA01C30745700913ECF /* Revealer.swift */,
+				FA0B0A531C2FEC3100913ECF /* Info.plist */,
+			);
+			name = Internals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,10 +235,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA0B0A9B1C2FED1300913ECF /* Explorer.swift in Sources */,
-				FA0B0AA51C307DFD00913ECF /* Revealer.swift in Sources */,
+				FA0B0AA51C307DFD00913ECF /* Resolver.swift in Sources */,
 				FA0B0AA31C307AA000913ECF /* Peer.swift in Sources */,
 				FA0B0A9F1C3071C200913ECF /* Advertiser.swift in Sources */,
-				FA0B0AA11C30745700913ECF /* Resolver.swift in Sources */,
+				FA0B0AA11C30745700913ECF /* Revealer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +358,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Servus/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Servus/Internals/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -369,7 +377,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Servus/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Servus/Internals/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
