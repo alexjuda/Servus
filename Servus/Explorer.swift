@@ -45,6 +45,9 @@ public class Explorer {
     let revealer: Revealer
     let resolver: Resolver
     
+    /// This device's peer identifier.
+    public let identifier: String
+    
     /// Delegate object to be notified about explorations.
     public var delegate: ExplorerDelegate?
     
@@ -63,6 +66,7 @@ public class Explorer {
         advertiser = Advertiser(identifier: identifier, netServiceType: type, netServiceDomain: domain)
         revealer = Revealer(localIdentifier: identifier, netServiceType: type, netServiceDomain: domain)
         resolver = Resolver(timeout: 60.0)
+        self.identifier = identifier
         
         revealer.delegate = self
         resolver.delegate = self
