@@ -4,6 +4,16 @@ Enables discovering other devices over standard LAN _and_ ad-hoc peer-to-peer Wi
 
 Written in Swift 3.
 
+## What is it for?
+
+When nearby devices are discovered and properly resolved, Servus provides a hostname for each of them. Combine it with [a HTTP Server for iOS](https://github.com/httpswift/swifter), and [HTTP requests](https://www.raywenderlich.com/110458/nsurlsession-tutorial-getting-started), and BAM! You send data between devices using Bluetooth or WiFi without having to worry about the infrastructure.
+
+### Isn't it MultipeerConnectivity?
+
+[Apple provides a framework](https://developer.apple.com/reference/multipeerconnectivity) for such ad-hoc networks. However, from my experience it's quite unreliable (gets stuck pretty often), and is painful to test. 
+
+Servus, on the other hand, provides only the discovery phase. Data transfer is done separately, so the developer has greater insight to it. Also, it's super easy to test! Just open the app on the simulator, or on a device within the same LAN as your computer and you can send HTTP requests to `http://your-device-hostname:PORT/`. _And it works_. Magic.
+
 ## Example
 ```Swift
 explorer = Explorer()
