@@ -8,7 +8,7 @@ Written in Swift 3.
 ```Swift
 explorer = Explorer()
 explorer.delegate = self
-explorer.startExploring()
+explorer.startExploring() // Start announcing this device's presence & reporting discovery of other ones.
 
 ...
 
@@ -17,7 +17,7 @@ func explorer(explorer: Explorer, didDeterminePeer peer: Peer) {
 }
 ```
 
-For working example check out [the app target](https://github.com/airalex/Servus/blob/master/ServusExample/AppDelegate.swift). 
+For working example check out [the app target](ServusExample/AppDelegate.swift). 
 
 ## Installation
 
