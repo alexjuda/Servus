@@ -9,15 +9,15 @@
 import Foundation
 
 protocol RevealerDelegate {
-    func revealer(revealer: Revealer, didRevealService netService: NSNetService)
-    func revealer(revealer: Revealer, didLoseService netService: NSNetService)
+    func revealer(_ revealer: Revealer, didRevealService netService: NetService)
+    func revealer(_ revealer: Revealer, didLoseService netService: NetService)
 }
 
 class Revealer: NSObject {
-    private let localIdentifier: String
-    private let netServiceType: String
-    private let netServiceDomain: String
-    private var browser: NSNetServiceBrowser?
+    fileprivate let localIdentifier: String
+    fileprivate let netServiceType: String
+    fileprivate let netServiceDomain: String
+    fileprivate var browser: NetServiceBrowser?
     
     var delegate: RevealerDelegate?
     
@@ -30,10 +30,10 @@ class Revealer: NSObject {
     func start() {
         stop()
         
-        browser = NSNetServiceBrowser()
+        browser = NetServiceBrowser()
         browser?.delegate = self
         browser?.includesPeerToPeer = true
-        browser?.searchForServicesOfType(netServiceType, inDomain: netServiceDomain)
+        browser?.searchForServices(ofType: netServiceType, inDomain: netServiceDomain)
     }
     
     func stop() {
@@ -42,8 +42,8 @@ class Revealer: NSObject {
     }
 }
 
-extension Revealer: NSNetServiceBrowserDelegate {
-    func netServiceBrowser(browser: NSNetServiceBrowser, didFindService service: NSNetService, moreComing: Bool) {
+extension Revealer: NetServiceBrowserDelegate {
+    func netServiceBrowser(_ browser: NetServiceBrowser, didFind service: NetService, moreComing: Bool) {
         if service.name == localIdentifier {
             return
         }
@@ -51,7 +51,7 @@ extension Revealer: NSNetServiceBrowserDelegate {
         delegate?.revealer(self, didRevealService: service)
     }
     
-    func netServiceBrowser(browser: NSNetServiceBrowser, didRemoveService service: NSNetService, moreComing: Bool) {
+    func netServiceBrowser(_ browser: NetServiceBrowser, didRemove service: NetService, moreComing: Bool) {
         delegate?.revealer(self, didLoseService: service)
     }
 }

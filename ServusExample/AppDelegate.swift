@@ -15,16 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var explorer: Explorer!
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         explorer = Explorer()
         explorer.delegate = self
         explorer.startExploring()
         print("Started exploring nearby peers...")
         
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window = UIWindow(frame: UIScreen.main.bounds)
         
         let vc = UIViewController()
-        vc.view.backgroundColor = UIColor.whiteColor()
+        vc.view.backgroundColor = UIColor.white
         
         window?.rootViewController = vc
         window?.makeKeyAndVisible()
@@ -34,15 +34,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate: ExplorerDelegate {
-    func explorer(explorer: Explorer, didSpotPeer peer: Peer) {
+    func explorer(_ explorer: Explorer, didSpotPeer peer: Peer) {
         print("Spotted \(peer.identifier). Didn't determine its addresses yet")
     }
     
-    func explorer(explorer: Explorer, didDeterminePeer peer: Peer) {
+    func explorer(_ explorer: Explorer, didDeterminePeer peer: Peer) {
         print("Determined hostname for \(peer.identifier): \(peer.hostname!)")
     }
     
-    func explorer(explorer: Explorer, didLosePeer peer: Peer) {
+    func explorer(_ explorer: Explorer, didLosePeer peer: Peer) {
         print("Lost \(peer.hostname) from sight")
     }
 }

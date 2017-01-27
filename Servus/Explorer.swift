@@ -18,7 +18,7 @@ public protocol ExplorerDelegate {
      - parameter explorer: Explorer instance.
      - parameter peer:     Spotted peer.
      */
-    func explorer(explorer: Explorer, didSpotPeer peer: Peer)
+    func explorer(_ explorer: Explorer, didSpotPeer peer: Peer)
     
     /**
      Method to be called after a peer was discovered and its addresses are resolved. Standard TCP connections can be established now (i.e. HTTP).
@@ -26,30 +26,30 @@ public protocol ExplorerDelegate {
      - parameter explorer: Explorer instance.
      - parameter peer:     Determined peer.
      */
-    func explorer(explorer: Explorer, didDeterminePeer peer: Peer)
+    func explorer(_ explorer: Explorer, didDeterminePeer peer: Peer)
     /**
      Method to be called after a peer service disappeared. This can occur when the other device's user turns off WiFi or Bluetooth.
      
      - parameter explorer: Explorer instance
      - parameter peer:     Lost peer.
      */
-    func explorer(explorer: Explorer, didLosePeer peer: Peer)
+    func explorer(_ explorer: Explorer, didLosePeer peer: Peer)
 }
 
 /// Encapsulates discovering nearby Bonjour services and broadcasting its own one.
 ///
 /// Enables creating ad-hoc networks (if not already connected), discovering and resolving addresses of other devices.
 /// Supports connections in the same LAN, WiFi to WiFi and Bluetooth to Bluetooth.
-public class Explorer {
+open class Explorer {
     let advertiser: Advertiser
     let revealer: Revealer
     let resolver: Resolver
     
     /// This device's peer identifier.
-    public let identifier: String
+    open let identifier: String
     
     /// Delegate object to be notified about explorations.
-    public var delegate: ExplorerDelegate?
+    open var delegate: ExplorerDelegate?
     
     /**
      Explorer initalizer.
@@ -78,11 +78,11 @@ public class Explorer {
      - returns: Initialized object.
      */
     public convenience init() {
-        let uuid = NSUUID().UUIDString
+        let uuid = UUID().uuidString
         
-        let appName = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleIdentifier")!
-        let charactersToRemove = NSCharacterSet.alphanumericCharacterSet().invertedSet
-        let cleanAppName = appName.componentsSeparatedByCharactersInSet(charactersToRemove).joinWithSeparator("")
+        let appName = Bundle.main.object(forInfoDictionaryKey: "CFBundleIdentifier")!
+        let charactersToRemove = CharacterSet.alphanumerics.inverted
+        let cleanAppName = (appName as AnyObject).components(separatedBy: charactersToRemove).joined(separator: "")
         
         self.init(identifier: uuid, appName: cleanAppName)
     }
@@ -91,7 +91,7 @@ public class Explorer {
      Starts the exploration process. Makes current device visible with Bonjour (LAN and P2P) and searches for other devices.
      Calls the delegate on each discovery.
      */
-    public func startExploring() {
+    open func startExploring() {
         advertiser.start()
         revealer.start()
     }
@@ -99,32 +99,32 @@ public class Explorer {
     /**
      Stops the exploration process. Hides current device and stops calling the delegate.
      */
-    public func stopExploring() {
+    open func stopExploring() {
         advertiser.stop()
         revealer.stop()
     }
 }
 
 extension Explorer: RevealerDelegate {
-    func revealer(revealer: Revealer, didRevealService netService: NSNetService) {
+    func revealer(_ revealer: Revealer, didRevealService netService: NetService) {
         resolver.resolveService(netService)
         let peer = Peer(netService: netService)
         delegate?.explorer(self, didSpotPeer: peer)
     }
     
-    func revealer(revealer: Revealer, didLoseService netService: NSNetService) {
+    func revealer(_ revealer: Revealer, didLoseService netService: NetService) {
         let peer = Peer(netService: netService)
         delegate?.explorer(self, didLosePeer: peer)
     }
 }
 
 extension Explorer: ResolverDelegate {
-    func resolver(resolver: Resolver, didResolveService netService: NSNetService) {
+    func resolver(_ resolver: Resolver, didResolveService netService: NetService) {
         let peer = Peer(netService: netService)
         delegate?.explorer(self, didDeterminePeer: peer)
     }
     
-    func resolver(resolver: Resolver, failedToResolveService netService: NSNetService) {
+    func resolver(_ resolver: Resolver, failedToResolveService netService: NetService) {
         let peer = Peer(netService: netService)
         delegate?.explorer(self, didLosePeer: peer)
     }

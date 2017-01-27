@@ -13,7 +13,7 @@ class Advertiser {
     let netServiceType: String
     let netServiceDomain: String
     
-    var announcingService: NSNetService?
+    var announcingService: NetService?
     
     init(identifier: String, netServiceType: String, netServiceDomain: String) {
         self.identifier = identifier
@@ -24,7 +24,7 @@ class Advertiser {
     func start() {
         stop()
         
-        announcingService = NSNetService(domain: netServiceDomain, type: netServiceType, name: identifier, port: 55855)
+        announcingService = NetService(domain: netServiceDomain, type: netServiceType, name: identifier, port: 55855)
         announcingService?.includesPeerToPeer = true
         announcingService?.publish()
     }

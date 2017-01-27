@@ -9,34 +9,34 @@
 import Foundation
 
 protocol ResolverDelegate {
-    func resolver(resolver: Resolver, didResolveService netService: NSNetService)
-    func resolver(resolver: Resolver, failedToResolveService netService: NSNetService)
+    func resolver(_ resolver: Resolver, didResolveService netService: NetService)
+    func resolver(_ resolver: Resolver, failedToResolveService netService: NetService)
 }
 
 class Resolver: NSObject {
-    private lazy var servicesInProgress = Set<NSNetService>()
-    private let timeout: NSTimeInterval
+    fileprivate lazy var servicesInProgress = Set<NetService>()
+    fileprivate let timeout: TimeInterval
     
     var delegate: ResolverDelegate?
     
-    init(timeout: NSTimeInterval) {
+    init(timeout: TimeInterval) {
         self.timeout = timeout
     }
     
-    func resolveService(netService: NSNetService) {
+    func resolveService(_ netService: NetService) {
         netService.delegate = self
         servicesInProgress.insert(netService)
-        netService.resolveWithTimeout(timeout)
+        netService.resolve(withTimeout: timeout)
     }
 }
 
-extension Resolver: NSNetServiceDelegate {
-    func netServiceDidResolveAddress(sender: NSNetService) {
+extension Resolver: NetServiceDelegate {
+    func netServiceDidResolveAddress(_ sender: NetService) {
         servicesInProgress.remove(sender)
         delegate?.resolver(self, didResolveService: sender)
     }
     
-    func netService(sender: NSNetService, didNotResolve errorDict: [String : NSNumber]) {
+    func netService(_ sender: NetService, didNotResolve errorDict: [String : NSNumber]) {
         servicesInProgress.remove(sender)
         delegate?.resolver(self, failedToResolveService: sender)
     }
